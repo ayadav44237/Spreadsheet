@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
+
+.cell {
+  border-bottom: 1px solid #ccc; /* Adjust color and size as needed */
+}
+
+.cell:last-child {
+  border-bottom: none; /* Remove bottom border for the last cell */
+}
+
+.row:last-child .cell {
+  border-bottom: 1px solid #ccc; /* Ensure the last row has a bottom border */
+}
+
