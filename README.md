@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Spreadsheet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a spreadsheet application built with React that mimics the functionality of a basic Excel sheet. It includes features such as adding/removing rows and columns, data validation with dropdowns for column types, formatting options, and undo/redo capabilities.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Dynamic Grid**: The application starts with a default 10x10 grid layout.
+- **Add/Remove Rows and Columns**: Users can add or remove rows and columns dynamically.
+- **Data Validation**: Each column header includes a dropdown menu to specify the type of data (e.g., Text, Number, Date, Boolean).
+- **Formatting**: Users can align text and change the font size of the cell content.
+- **Undo/Redo**: The application supports undo and redo functionality for changes made to the spreadsheet.
+- **Responsive Design**: The application is responsive and adapts to different screen sizes.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **JavaScript**: The main programming language used for the project.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository to your local machine:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    git clone https://github.com/your-username/spreadsheet.git
+    ```
 
-### `npm run build`
+2. Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    cd spreadsheet
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install the necessary dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+4. Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm start
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Open your browser and navigate to `http://localhost:3000` to view the application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## File Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **src/components/Spreadsheet.js**: Main component that handles the overall functionality of the spreadsheet.
+- **src/components/SpreadsheetCell.js**: Component representing individual cells in the spreadsheet.
+- **src/components/SpreadsheetHeader.js**: Component that renders the column headers with dropdowns for data type selection.
+- **src/components/SpreadsheetRow.js**: Component that renders a row in the spreadsheet.
+- **src/components/SpreadsheetControls.js**: Component containing controls for adding/removing rows and columns, and formatting options.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Adding Rows/Columns**: Use the buttons in the control panel to add or remove rows and columns.
+- **Data Validation**: Select the data type for each column from the dropdown in the column headers.
+- **Formatting**: Use the formatting controls to align text and adjust the font size.
+- **Undo/Redo**: Use the undo and redo buttons to revert or reapply changes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Customization
 
-### Code Splitting
+- **Grid Size**: Modify the initial grid size by adjusting the `rows` and `columns` state in `Spreadsheet.js`.
+- **Default Cell Values**: Change the default cell values by modifying the `data` state in `Spreadsheet.js`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Known Issues
 
-### Analyzing the Bundle Size
+- **Dropdown Width**: Ensure that the dropdowns are properly aligned and sized. If issues occur, adjust the CSS in `SpreadsheetHeader.js` and `SpreadsheetCell.js`.
+- **Performance**: With a large number of rows and columns, the application may experience performance issues.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Live Demo
 
-### Making a Progressive Web App
+Check out the deployed version of the application here: [Spreadsheet Live Demo](https://spreadsheet-liart.vercel.app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributions
 
-### Advanced Configuration
+Feel free to fork this repository, make changes, and submit pull requests. Contributions are always welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contact
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For any questions or suggestions, please feel free to reach out to [your-email@example.com](mailto:your-email@example.com).
